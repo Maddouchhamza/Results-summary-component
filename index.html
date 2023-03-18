@@ -14,53 +14,27 @@
     <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
-    <!-- Your Result 76 of 100 Great You scored higher than 65% of the people who
-    have taken these tests. Summary -->
-
-    <div class="flex items-center justify-between w-56">
-      <div class="flex items-center">
-        <div class="mr-2" id="Reaction-img"></div>
-        <div id="Reaction"></div>
+    <div
+      class="rounded-b-3xl flex flex-col items-center justify-center bg-gradient-to-t from-[#2e2be9] to-[#7857ff] py-5"
+    >
+      <h3 class="text-white font-bold">Your Result</h3>
+      <div
+        class="flex flex-col text-center bg-gradient-to-b from-[#2e2be9] to-[#7857ff] w-32 h-32 text-4xl font-extrabold text-white rounded-full justify-center my-5"
+      >
+        76 <span class="text-base font-medium text-gray-400">of 100</span>
       </div>
-      <div class="flex items-center">
-        <div id="Reaction-score"></div>
-        <div>/100</div>
-      </div>
+      <h2 class="text-white font-semibold text-xl mb-2">Great</h2>
+      <p class="text-sm text-center text-white px-16 text-gray-300">
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
     </div>
-
-    <div class="flex items-center justify-between w-56">
-      <div class="flex items-center">
-        <div class="mr-2" id="Memory-img"></div>
-        <div id="Memory"></div>
-      </div>
-      <div class="flex items-center">
-        <div id="Memory-score"></div>
-        <div>/100</div>
-      </div>
+    <div class="flex flex-col mx-6 gap-5 my-5">
+      <h6 class="text-blue-900 font-bold">Summary</h6>
+      <div class="card flex flex-col gap-5"></div>
+      <button class="bg-blue-900 text-white py-4 rounded-3xl font-bold">
+        Continue
+      </button>
     </div>
-
-    <div class="flex items-center justify-between w-56">
-      <div class="flex items-center">
-        <div class="mr-2" id="Verbal-img"></div>
-        <div id="Verbal"></div>
-      </div>
-      <div class="flex items-center">
-        <div id="Verbal-score"></div>
-        <div>/100</div>
-      </div>
-    </div>
-
-    <div class="flex items-center justify-between w-56">
-      <div class="flex items-center">
-        <div class="mr-2" id="Visual-img"></div>
-        <div id="Visual"></div>
-      </div>
-      <div class="flex items-center">
-        <div id="Visual-score"></div>
-        <div>/100</div>
-      </div>
-    </div>
-
     <script type="module" src="./main.js"></script>
   </body>
 </html>

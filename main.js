@@ -1,37 +1,23 @@
 import data from "./data.json";
 
-let image;
-let receivingElement;
-let imageClone;
+let getCategory = (myJson) => {
+  return (document.querySelector(".card").innerHTML += `      <div
+  style="background-color: ${myJson.color};" class="flex items-center justify-between rounded-lg py-3 px-4"
+>
+  <div class="flex items-center">
+    <div class="mr-2" id="Reaction-img">
+      <img src=${myJson.icon} alt="" />
+    </div>
+    <div id="Reaction" class="font-bold" style="color:${myJson.txtColor};">${myJson.category}</div>
+  </div>
+  <div class="flex items-center font-bold">
+    <div id="Reaction-score">${myJson.score}&nbsp</div>
+    <div class="text-gray-500">/ 100</div>
+  </div>
+</div>
 
-document.getElementById("Reaction").innerHTML = data[0].category;
-document.getElementById("Reaction-score").innerHTML = data[0].score;
-image = document.createElement("img");
-receivingElement = document.getElementById("Reaction-img");
-imageClone = image.cloneNode();
-imageClone.src = data[0].icon;
-receivingElement.appendChild(imageClone);
+         `);
+};
 
-document.getElementById("Memory").innerHTML = data[1].category;
-document.getElementById("Memory-score").innerHTML = data[1].score;
-image = document.createElement("img");
-receivingElement = document.getElementById("Memory-img");
-imageClone = image.cloneNode();
-imageClone.src = data[1].icon;
-receivingElement.appendChild(imageClone);
-
-document.getElementById("Verbal").innerHTML = data[2].category;
-document.getElementById("Verbal-score").innerHTML = data[2].score;
-image = document.createElement("img");
-receivingElement = document.getElementById("Verbal-img");
-imageClone = image.cloneNode();
-imageClone.src = data[2].icon;
-receivingElement.appendChild(imageClone);
-
-document.getElementById("Visual").innerHTML = data[3].category;
-document.getElementById("Visual-score").innerHTML = data[3].score;
-image = document.createElement("img");
-receivingElement = document.getElementById("Visual-img");
-imageClone = image.cloneNode();
-imageClone.src = data[3].icon;
-receivingElement.appendChild(imageClone);
+let category = data.map(getCategory);
+console.log(category);
